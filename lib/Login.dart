@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'Home.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -36,7 +36,12 @@ class _LoginPageState extends State<LoginPage> {
       borderRadius: BorderRadius.circular(30.0),
       color: Color(0xffF8716B),
       child: Container(
-        child: FlatButton.icon(onPressed: null, icon: Icon(Icons.blur_on), label: Text('SignIn'))
+        child: FlatButton.icon(onPressed:() {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => HomePage())
+          );
+        }, icon: Icon(Icons.blur_on), label: Text('SignIn'))
       )
     );
 
@@ -48,8 +53,6 @@ class _LoginPageState extends State<LoginPage> {
           child: Padding(
             padding: const EdgeInsets.all(36.0),
             child: ListView(
-              // crossAxisAlignment: CrossAxisAlignment.center,
-              // mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
                     height: 155.0,
@@ -63,7 +66,16 @@ class _LoginPageState extends State<LoginPage> {
                 passwordField,
                 SizedBox(height: 35.0),
                 loginButon,
-                SizedBox(height: 15.0)
+                SizedBox(height: 15.0),
+                // Expanded(
+                //   child: Align(
+                //     alignment: FractionalOffset.bottomCenter,
+                //     child: MaterialButton(
+                //       onPressed: () => {},
+                //       child: Text('Forgot Account ?'),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

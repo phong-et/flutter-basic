@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Login.dart';
+import 'Home.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink,
         // backgroundColor: Color(0xffF4D0CC)
       ),
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
